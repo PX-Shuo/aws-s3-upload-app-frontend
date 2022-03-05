@@ -3,8 +3,8 @@ import axios from 'axios'
 
 const Uploader = () => {
   const [file, setFile] = useState(null)
-  const [name, setName] = useState('')
-  const [bodytext, setBodytext] = useState('')
+  // const [name, setName] = useState('')
+  // const [bodytext, setBodytext] = useState('')
 
   const upload = async (e) => {
     e.preventDefault()
@@ -32,15 +32,11 @@ const Uploader = () => {
       <form onSubmit={upload}>
         <input type='file' onChange={e => setFile(e.target.files[0])} />
         <br />
-        <input type='text' value={name} onChange={e => setName(e.target.value)} />
+        {/* <input type='text' value={name} onChange={e => setName(e.target.value)} />
         <br />
-        <input type='text' value={bodytext} onChange={e => setBodytext(e.target.value)} />
+        <input type='text' value={bodytext} onChange={e => setBodytext(e.target.value)} /> */}
         <br />
         <input type='submit' value='Upload' />
-        <div>{file?.name}</div>
-        <div>{file?.type}</div>
-        <div>{name}</div>
-        <div>{bodytext}</div>
       </form>
     </>
   )
