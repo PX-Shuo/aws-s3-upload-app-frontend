@@ -10,7 +10,7 @@ const Uploader = () => {
     e.preventDefault()
     console.log('Submitted!')
 
-    const url = await axios.post('/api/generate', {
+    const url = await axios.post('https://www.s3uploadapi.transcribestreamingapp.store/api/generate', {
       bucket: 'app--s3-presignedurl-upload',
       filename: file?.name,
     })
